@@ -1,0 +1,46 @@
+*COMPOSITION:
+.Composition in C++ refers to the concept of creating complex objects by combining simpler objects or data types. It is a way to design classes and structures in a manner that promotes code reuse and modularity.
+  In composition, one class contains an object of another class, and the contained object can exist independently of the container.
+  This is in contrast to inheritance, where a class can inherit from another class.
+
+
+Eg:
+#include<iostream>
+#include<string.h>
+using namespace std;
+class book
+{
+    public:
+string bname;
+string bauthor;
+};
+class publisher
+{
+float price;
+book b;
+public:
+void read_details()
+{
+cout<<"Enter bookname:";
+cin>>b.bname;
+cout<<"Enter author name:";
+cin>>b.bauthor;
+cout<<"enter price :";
+cin>>price;
+}
+void display() const
+{
+cout<<"Book Name :"<<b.bname<<endl;
+cout<<"Author Name :"<<b.bauthor<<endl;
+cout<<"Price :"<<price<<endl;
+}
+};
+int main()
+{
+    publisher obj;
+    obj.read_details();
+    obj.display();
+
+    return 0;
+
+}
